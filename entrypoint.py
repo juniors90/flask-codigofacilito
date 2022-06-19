@@ -1,0 +1,33 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# This file is part of the
+# Flask-Codigofacilito Project
+#      (https://github.com/juniors90/flask-codigofacilito).
+# Copyright (c) 2022, Ferreira Juan David
+# License: MIT
+# Full Text:
+#     https://github.com/juniors90/flask-codigofacilito/blob/master/LICENSE
+#
+# =============================================================================
+# DOCS
+# =============================================================================
+
+"""Flask-Codigofacilito
+
+Implementation of in Flask.
+"""
+
+# =============================================================================
+# IMPORTS
+# =============================================================================
+
+import os
+
+from app import create_app
+
+settings_module = os.getenv("APP_SETTINGS_MODULE")
+
+app = create_app(settings_module)
+
+
