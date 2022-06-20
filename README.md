@@ -1,4 +1,10 @@
-Flask Project
+# Flask Project (Building)
+
+[![GitHub issues](https://img.shields.io/github/issues/juniors90/flask-codigofacilito)](https://github.com/juniors90/flask-codigofacilito/issues)
+[![GitHub forks](https://img.shields.io/github/forks/juniors90/flask-codigofacilito)](https://github.com/juniors90/flask-codigofacilito/network)
+[![GitHub stars](https://img.shields.io/github/stars/juniors90/flask-codigofacilito)](https://github.com/juniors90/flask-codigofacilito/stargazers)
+[![GitHub license](https://img.shields.io/github/license/juniors90/flask-codigofacilito)](https://github.com/juniors90/flask-codigofacilito/blob/main/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/juniors90/flask-codigofacilito?color=green)](https://github.com/juniors90/flask-codigofacilito/graphs/contributors)
 
 [Query String](https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes)
 
