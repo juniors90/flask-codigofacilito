@@ -47,14 +47,16 @@ def create_app(settings_module):
     db.init_app(app)
     migrate.init_app(app, db)
 
-    from app.public import public_bp
-
-    app.register_blueprint(public_bp)
-
     # Blueprint Registers
+    from app.public import public_bp
+    app.register_blueprint(public_bp)
     from app.auth import auth_bp
-
     app.register_blueprint(auth_bp)
+    from app.product import product_bp
+    app.register_blueprint(product_bp)
+    from app.sale import sale_bp
+    app.register_blueprint(sale_bp)
+
 
     # Custom error handlers
     register_error_handlers(app)
