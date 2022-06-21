@@ -6,7 +6,7 @@ from app import db
 
 class User(db.Model, UserMixin):
 
-    __tablename__ = "blog_user"
+    __tablename__ = "lib_user"
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)

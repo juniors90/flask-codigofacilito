@@ -68,6 +68,12 @@ def login():
             if not next_page or url_parse(next_page).netloc != "":
                 next_page = url_for("public.index")
             return redirect(next_page)
+
+        if user is not None and not user.check_password(form.password.data):
+            context['error'] = f"El email {email} no se enuentra registrado."
+            return render_template("auth/login_form.html", **context)
+        
+
     return render_template("auth/login_form.html", **context)
 
 

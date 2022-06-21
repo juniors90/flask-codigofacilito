@@ -1,0 +1,13 @@
+<div class="ui large secondary inverted pointing menu">
+    <a class="toc item">
+      <i class="sidebar icon"></i>
+    </a>
+    <a class="active item" href="{{ url_for('public.index') }}">Home</a>
+    <a class="item" href="{{ url_for('product.index') }}">Products</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <div class="right item">
+      <a class="ui inverted button" href="{{ url_for('auth.login') }}">Log in</a>
+      <a class="ui inverted button" href="{{ url_for('auth.show_signup_form') }}">Sign Up</a>
+    </div>
+  </div>

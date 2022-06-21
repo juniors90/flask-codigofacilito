@@ -1,0 +1,16 @@
+<div class="ui large top fixed menu transition hidden">
+    <div class="ui container">
+      <a class="active item" href="{{ url_for('public.index') }}">Home</a>
+      <a class="item" href="{{ url_for('product.index') }}">Products</a>
+      <a class="item">Company</a>
+      <a class="item">Careers</a>
+      <div class="right menu">
+        <div class="item">
+          <a class="ui button" href="{{ url_for('auth.login') }}">Log in</a>
+        </div>
+        <div class="item">
+          <a class="ui primary button" href="{{ url_for('auth.show_signup_form') }}">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -2,8 +2,12 @@
 
 {% from 'auth/_macros.html' import render_field %}
 
-{% block title %}
-    {{ title }}
+{% block title %} {{super()}} {{ title }} {% endblock %}
+
+{% block scripts %}
+  {% if error %}
+    <script src="{{ url_for( 'static', filename='js/custommsg.js') }}"></script>
+  {% endif %}
 {% endblock %}
 
 {% block content %}

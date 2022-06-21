@@ -9,4 +9,4 @@ from flask import Blueprint
 
 sale_bp = Blueprint("sale", __name__, template_folder="templates")
 
-from app.product import routes
+from app.sale import routes

@@ -1,112 +1,27 @@
-<!DOCTYPE html>
-<!-- saved from url=(0043)https://semantic-ui.com/examples/login.html -->
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- Standard Meta -->
+{% extends '_base.html' %}
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/login.css') }}" />
+{% endblock %}
 
-    <!-- Site Properties -->
-    <title>{% block title %}{% endblock %}</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/reset.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/site.css') }}"
-    />
+{% block scripts %}
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/container.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/grid.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/header.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/image.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/menu.css') }}"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/divider.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/segment.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/form.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/input.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/button.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/list.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/message.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login_files/icon.css') }}"
-    />
-    <script src="{{ url_for( 'static', filename='js/assets/library/jquery.min.js') }}"></script>
-    <script src="{{ url_for( 'static', filename='js/semantic/dist/components/form.js') }}"></script>
-    <script src="{{ url_for( 'static', filename='js/semantic/dist/components/transition.js') }}"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for( 'static', filename='css/login.css') }}"
-    />
-    
+<script src="{{ url_for( 'static', filename='js/semantic/dist/components/form.js') }}"></script>
+{% if request.path == '/login' %}
     <script src="{{ url_for( 'static', filename='js/login.js') }}"></script>
-  </head>
-  <body>
+{% endif %}
+{% if request.path == '/signup/' %} 
+    <script src="{{ url_for( 'static', filename='js/signup.js') }}"></script>
+{% endif %}
+
+{% endblock %}
+
+{% block body %}
     <div class="ui middle aligned center aligned grid">
       <div class="column">
         <h2 class="ui teal image header">
           <img
-            src="{{ url_for( 'static', filename='css/login_files/logo.png') }}"
+            src="{{ url_for( 'static', filename='css/semantic/logo.png') }}"
             class="image"
           />
           {% if request.path == '/login' %}
@@ -125,5 +40,4 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+{% endblock %}

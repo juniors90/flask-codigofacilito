@@ -4,10 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %} Flask-Codigofacilito - {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/reset.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/site.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/container.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/grid.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/header.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/image.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/menu.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/divider.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/segment.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/form.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/input.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/button.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/list.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/message.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/semantic/icon.css') }}" />
+    {% block styles %}{% endblock %}
+    <script src="{{ url_for( 'static', filename='js/assets/library/jquery.min.js') }}"></script>
+    <script src="{{ url_for( 'static', filename='js/semantic/dist/components/transition.js') }}"></script>
+    {% block scripts %}{% endblock %}
 </head>
 <body>
-    {% include '_nav.html' %}
-   
-    {% block content %}{% endblock %}
+    {% block body %}{% endblock %}
 </body>
 </html>

@@ -1,8 +1,12 @@
 {% extends 'auth/_base.html' %}
+{% from 'auth/_macros.html' import render_field %} 
+{% block title %} {{super()}} {{ title }} {% endblock %}
 
-{% from 'auth/_macros.html' import render_field %}
-{% block title %}
-    {{ title }}
+{% block scripts %}
+{{super()}}
+  {% if error %}
+    <script src="{{ url_for( 'static', filename='js/custommsg.js') }}"></script>
+  {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -14,11 +18,8 @@
     {{ render_field(form.password, "lock") }}
     {{ form.submit(class="ui fluid large teal submit button") }}
   </div>
-  <div class="ui error message">
-    {% if error %}
-        <li>{{ error }}</li>
-    {% endif %}
-  </div>
+  {% set error_login = [ form.email.errors, form.password.errors ]%}
+  <div class="ui error message" id="custommsg"></div>
 </form>
 
 {% endblock %}
